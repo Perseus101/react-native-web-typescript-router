@@ -1,18 +1,25 @@
-import React, { memo } from "react";
-import { AppRegistry, View, Text, Platform, StyleSheet } from "react-native";
+import React from "react";
+import { AppRegistry, Platform } from "react-native";
+
+import { Router, Switch, Route } from './router';
+
+import Home from './components/Home';
+import Users from './components/Users';
+import About from './components/About';
 
 const appName = "example";
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" }
-});
 
-export const Main = memo(function Main() {
+export const Main = function Main() {
   return (
-    <View style={styles.container}>
-      <Text>react native with web and typescript</Text>
-    </View>
+    <Router>
+      <Switch>
+        <Route path="/about"><About /></Route>
+        <Route path="/users"><Users /></Route>
+        <Route path="/"><Home /></Route>
+      </Switch>
+    </Router>
   );
-});
+};
 
 AppRegistry.registerComponent(appName, () => Main);
 if (Platform.OS === "web") {
