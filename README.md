@@ -2,47 +2,32 @@
 
 ![image](https://i.imgur.com/sa5z3DR.gif)
 
-## install
+## Install
 
 ```sh
-gem install cocoapods
-npm i -g yarn
-git clone git@github.com:ethanneff/react-native-web-typescript.git
-cd react-native-web-typescript
-yarn install
-cd ios
-pod install
-cd ..
+$ gem install cocoapods
+$ npm i -g yarn
+$ git clone git@github.com:ethanneff/react-native-web-typescript.git
+$ cd react-native-web-typescript
+$ yarn install
+$ cd ios
+$ pod install
+$ cd ..
 ```
 
-### run
+### Android Keystore
 
-```sh
-yarn ios
+```
+$ cd android/app
+$ keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
 ```
 
-```sh
-yarn android
-```
+## Run
 
 ```sh
-yarn web
-```
-
-### lint
-
-```sh
-yarn lint
-```
-
-### test
-
-```sh
-yarn test
-```
-
-### deploy
-
-```sh
-yarn build
+$ yarn ios
+... OR ...
+$ yarn android
+... OR ...
+$ yarn web
 ```
