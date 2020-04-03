@@ -1,17 +1,18 @@
 import React from "react";
 import { View, Text, StyleSheet, Platform } from "react-native";
+
 import { Link } from '../router';
 
 const styles = StyleSheet.create({
     horizontalOuterContainer: { height: '100vh', flexDirection: "row" },
-    verticalOuterContainer: { height: '100vh' },
+    verticalOuterContainer: { flex: 1, flexDirection:'column' },
     horizontalContainer: {
-        flex: 1,
+        flex: 0.5,
         alignItems: 'center',
         justifyContent: 'center',
     },
     verticalContainer: {
-        flex: 1,
+        flex: 0.5,
         alignItems: 'center',
         justifyContent: 'center',
     },

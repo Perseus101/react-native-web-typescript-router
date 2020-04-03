@@ -5,7 +5,6 @@ import { Link } from '../router';
 
 const styles = StyleSheet.create({
     container: {
-        height: '100vh',
         alignItems: 'center',
         justifyContent: 'center',
     },
