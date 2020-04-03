@@ -24,10 +24,19 @@ $ keytool -genkey -v -keystore debug.keystore -storepass android -alias androidd
 
 ## Run
 
+### Web
 ```sh
-$ yarn ios
-... OR ...
-$ yarn android
-... OR ...
 $ yarn web
+```
+
+### Android
+```sh
+$ yarn start
+$ yarn android
+```
+
+### iOS
+```sh
+$ yarn start
+$ yarn ios
 ```
